@@ -10,11 +10,15 @@ function Three() {
         opacity: 1,
         duration: 2,
         scale: 1,
-        repeat: -1,
-        yoyo: true,
-        yoyoEase: true,
+        ease: "back(2)",
       });
-      gsap.to(".img2", { x: 400, opacity: 1, duration: 2, scale: 1, delay: 2 });
+      gsap.to(".img2", {
+        x: 400,
+        opacity: 1,
+        duration: 2,
+        scale: 1,
+        ease: "linear",
+      });
     },
     { scope: container }
   );
