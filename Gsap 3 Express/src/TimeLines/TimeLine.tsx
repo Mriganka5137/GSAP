@@ -1,3 +1,4 @@
+import HoverEffects from "./HoverEffects";
 import One from "./One";
 
 const TimeLine = () => {

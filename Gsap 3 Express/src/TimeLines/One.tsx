@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import HoverEffects from "./HoverEffects";
 
 const One = () => {
   const container = useRef(null);
@@ -10,28 +11,35 @@ const One = () => {
 
       tl.from(container.current, {
         opacity: 0,
-        duration: 1.5,
+        duration: 1,
         ease: "linear",
       });
-      tl.from("h1", {
-        // xPercent: -100,
-        opacity: 0,
-        scale: 3,
-        duration: 1.5,
-        ease: "linear",
-      });
+      tl.from(
+        "h1",
+        {
+          opacity: 0,
+          scale: 100,
+          duration: 1.5,
+        },
+        "<"
+      );
 
       tl.from("h2", {
         yPercent: 100,
         opacity: 0,
         duration: 1,
+        ease: "back",
       });
-      tl.from(".img1", {
-        scale: 0,
-        opacity: 0,
-        duration: 1,
-        ease: "circ",
-      });
+      tl.from(
+        ".img1",
+        {
+          yPercent: 100,
+          opacity: 0,
+          duration: 1,
+          ease: "back",
+        },
+        "<"
+      );
     },
     { scope: container }
   );
@@ -52,6 +60,7 @@ const One = () => {
         height={100}
         className="mt-10 rounded-full img1"
       />
+      <HoverEffects />
     </div>
   );
 };
