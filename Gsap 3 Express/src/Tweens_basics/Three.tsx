@@ -1,6 +1,8 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+
+// EASE
 function Three() {
   const container = useRef(null);
   useGSAP(
@@ -24,20 +26,20 @@ function Three() {
   );
 
   return (
-    <div className=" " ref={container}>
+    <div className="" ref={container}>
       <img
-        src="../../public/profile.jpg"
+        src="../../profile.jpg"
         alt=""
         width={200}
         height={100}
-        className=" rounded-full img1"
+        className="rounded-full img1"
       />
       <img
-        src="../../public/profile.jpg"
+        src="../../profile.jpg"
         alt=""
         width={200}
         height={100}
-        className=" rounded-full img2 mt-5"
+        className="mt-5 rounded-full img2"
       />
     </div>
   );
